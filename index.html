@@ -838,10 +838,18 @@
     }
 
     try {
-      const response = await fetch(nextPageUrl);
-      const result = await response.json();
-      const themes = result.data.data || [];
-      console.log("THEMES:", themes);
+      try {
+  const response = await fetch(nextPageUrl);
+  if (!response.ok) throw new Error("Gagal mengambil data");
+
+  const result = await response.json();
+  const themes = result.data.data || [];
+
+  console.log("THEMES:", themes);
+
+} catch (error) {
+  console.error("ERROR:", error);
+}
 
       nextPageUrl = result.data?.next_page_url || null;
       if (nextPageUrl) nextPageUrl = nextPageUrl.replace("http:", "https:");

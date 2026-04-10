@@ -849,6 +849,7 @@
         allThemes.push(theme);
 
         const card = document.createElement("div");
+        card.classList.add("theme-item");
         document.getElementById("searchInput").addEventListener("keyup", function () {
   const keyword = this.value.toLowerCase().trim();
   const items = document.querySelectorAll(".theme-item");
@@ -980,7 +981,35 @@
       console.error(error);
     }
   }
+// SEARCH (TAMBAHKAN DI SINI)
+document.getElementById("searchInput").addEventListener("keyup", function () {
+  const keyword = this.value.toLowerCase().trim();
+  const items = document.querySelectorAll(".theme-item");
+  const loadMoreBtn = document.getElementById("loadMore");
 
+  if (keyword === "") {
+    items.forEach(item => item.style.display = "block");
+    loadMoreBtn.style.display = "inline-flex";
+    return;
+  }
+
+  loadMoreBtn.style.display = "none";
+
+  items.forEach((item) => {
+    const title = item.querySelector("h3").innerText.toLowerCase();
+    const text = title + " jawa javanese adat minang padang batak sunda modern elegan";
+
+    if (text.includes(keyword)) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+});
+
+// INIT (BIARKAN INI TETAP)
+loadCategories();
+loadThemes();
   // INIT
   loadCategories();
   loadThemes();

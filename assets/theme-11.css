@@ -2,7 +2,7 @@
 
 body {
   background-color: #f6f2ff;
-  color: #2d1b4e;
+  color: #d4af37; /* GOLD utama */
   line-height: 1.6;
   font-family: "Urbanist", sans-serif;
 }
@@ -12,16 +12,17 @@ h2,
 h3 {
   font-family: "Instrument Serif", serif;
   font-weight: normal;
+  color: #ffd700; /* GOLD terang untuk heading */
 }
 
 h1 {
-  color: #4b2e83;
+  color: #ffd700;
 }
 
 /* PRIMARY (UNGU UTAMA) */
 .bg-primary {
   background-color: #7b4bff;
-  color: #ffffff;
+  color: #ffd700; /* teks jadi gold */
 }
 
 .hover\:bg-primary:hover {
@@ -29,13 +30,13 @@ h1 {
 }
 
 .hover\:text-primary:hover {
-  color: #7b4bff;
+  color: #ffd700;
 }
 
-/* SECONDARY (UNGU MUDA / SOFT) */
+/* SECONDARY */
 .bg-secondary {
   background-color: #efe9ff;
-  color: #2d1b4e;
+  color: #b8962e; /* gold lebih soft */
 }
 
 .hover\:bg-secondary:hover {
@@ -49,20 +50,20 @@ h1 {
 /* CARD */
 .bg-card {
   background-color: #ffffff;
-  color: #2d1b4e;
+  color: #b8962e;
   box-shadow: 0 10px 25px rgba(123, 75, 255, 0.15);
 }
 
 /* NAVBAR */
 .navbar {
   background-color: #ffffff;
-  color: #2d1b4e;
+  color: #b8962e;
   box-shadow: 0 5px 15px rgba(123, 75, 255, 0.1);
 }
 
-/* GRADIENT TEXT */
+/* GRADIENT TEXT GOLD */
 .text-gradient {
-  background-image: linear-gradient(45deg, #7b4bff, #b892ff);
+  background-image: linear-gradient(45deg, #ffd700, #d4af37);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -76,4 +77,5 @@ h1 {
 .btn {
   text-transform: uppercase;
   letter-spacing: 1px;
+  color: #ffd700;
 }

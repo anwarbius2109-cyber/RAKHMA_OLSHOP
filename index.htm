@@ -939,5 +939,70 @@ function setActive(el) {
 loadCategories();
 loadAllThemes();
 </script>
+<!-- MOBILE BOTTOM NAV -->
+<nav class="mobile-bottom-nav">
+  <a href="#home">🏠<br>Home</a>
+  <a href="#problem">⚠️<br>Problem</a>
+  <a href="#solusi">💡<br>Solusi</a>
+  <a href="#tema">🎨<br>Tema</a>
+  <a href="#paket">💰<br>Paket</a>
+  <a href="#faq">❓<br>FAQs</a>
+</nav>
+
+<style>
+/* ===== MOBILE BOTTOM NAV ===== */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #6d28d9;
+  display: none;
+  justify-content: space-around;
+  padding: 8px 4px;
+  z-index: 9999;
+  box-shadow: 0 -3px 15px rgba(0,0,0,0.25);
+}
+
+/* ITEM MENU */
+.mobile-bottom-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.2;
+  opacity: 0.9;
+  transition: 0.2s;
+  flex: 1;
+}
+
+/* HOVER & TAP */
+.mobile-bottom-nav a:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.mobile-bottom-nav a:active {
+  transform: scale(0.95);
+}
+
+/* KHUSUS HP */
+@media (max-width: 768px) {
+  .mobile-bottom-nav {
+    display: flex;
+  }
+
+  /* sembunyikan navbar atas */
+  .navbar {
+    display: none !important;
+  }
+
+  /* biar konten gak ketutup */
+  body {
+    padding-bottom: 80px;
+  }
+}
+</style>
   </body>
 </html>
